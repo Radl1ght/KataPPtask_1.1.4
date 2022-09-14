@@ -3,9 +3,8 @@ import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
 public class Main {
-
+private static final UserService userService = new UserServiceImpl();
     public static void main(String[] args) {
-        UserService userService = new UserServiceImpl();
         userService.createUsersTable();
         userService.saveUser("Walter", "White", (byte) 50);
         userService.saveUser("Dolores", "Abernathy", (byte) 25);
